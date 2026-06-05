@@ -7,130 +7,50 @@
 
 <style>
 
-:root{
-    --primary:#1e3a8a;
-    --bg:#faf8f3;
-    --text:#1f2937;
-    --muted:#6b7280;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-    font-family:Georgia,serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.8;
-}
-
-.container{
-    max-width:1100px;
+    max-width:900px;
     margin:auto;
-    padding:0 20px;
+    padding:80px 40px;
+    font-family:Georgia, serif;
+    background:#faf8f3;
+    color:#222;
+    line-height:1.9;
 }
 
-nav{
-    padding:25px 0;
-    text-align:center;
+h1{
+    font-size:4rem;
+    font-weight:normal;
+    margin-bottom:10px;
 }
 
-nav a{
-    color:var(--primary);
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+.tagline{
+    color:#666;
+    font-size:1.3rem;
+    margin-bottom:100px;
 }
 
-.hero{
-    text-align:center;
-    padding:60px 0;
-}
-
-.hero h1{
-    font-size:4.5rem;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:1.4rem;
-    color:var(--muted);
-}
-
-.graph{
-    margin:60px auto;
-    max-width:800px;
-    background:white;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-svg{
-    width:100%;
-    height:auto;
-}
-
-.node{
-    fill:#1e3a8a;
-}
-
-.node-text{
-    fill:white;
-    font-size:12px;
-    text-anchor:middle;
-    dominant-baseline:middle;
-    font-family:Arial;
-}
-
-.small-text{
-    fill:#111;
-    font-size:14px;
-    text-anchor:middle;
-    font-family:Arial;
-}
-
-.line{
-    stroke:#999;
-    stroke-width:2;
-}
-
-section{
-    padding:60px 0;
-}
-
-.card{
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.05);
-}
-
-h2{
-    margin-bottom:20px;
+.quote{
     font-size:2rem;
+    line-height:1.5;
+    margin-bottom:100px;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.section{
+    margin-bottom:80px;
+    font-size:1.2rem;
 }
 
-.box{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+hr{
+    border:none;
+    border-top:1px solid #ddd;
+    margin:80px 0;
 }
 
-footer{
-    text-align:center;
-    padding:60px;
+.footer{
+    margin-top:120px;
     color:#777;
+    text-align:center;
+    font-size:1rem;
 }
 
 </style>
@@ -138,165 +58,81 @@ footer{
 
 <body>
 
-<div class="container">
-
-<nav>
-<a href="#">Home</a>
-<a href="#">Manifesto</a>
-<a href="#">Papers</a>
-<a href="#">Visualizations</a>
-<a href="#">Roadmap</a>
-</nav>
-
-<div class="hero">
-
 <h1>Inter Concept Space</h1>
 
-<p>
-Exploring how ideas connect, evolve and generate meaning.
+<p class="tagline">
+Exploring the Structure of Ideas
 </p>
 
-</div>
+<div class="quote">
 
-<div class="graph">
-
-<svg viewBox="0 0 800 500">
-
-<line class="line" x1="400" y1="250" x2="250" y2="150"/>
-<line class="line" x1="400" y1="250" x2="550" y2="150"/>
-<line class="line" x1="400" y1="250" x2="250" y2="350"/>
-<line class="line" x1="400" y1="250" x2="550" y2="350"/>
-
-<line class="line" x1="250" y1="150" x2="120" y2="80"/>
-<line class="line" x1="250" y1="150" x2="120" y2="220"/>
-
-<line class="line" x1="550" y1="150" x2="680" y2="80"/>
-<line class="line" x1="550" y1="150" x2="680" y2="220"/>
-
-<line class="line" x1="250" y1="350" x2="120" y2="420"/>
-<line class="line" x1="550" y1="350" x2="680" y2="420"/>
-
-<!-- Center -->
-
-<circle class="node" cx="400" cy="250" r="45"/>
-<text class="node-text" x="400" y="250">ICS</text>
-
-<!-- Level 1 -->
-
-<circle class="node" cx="250" cy="150" r="25"/>
-<text class="small-text" x="250" y="190">Knowledge</text>
-
-<circle class="node" cx="550" cy="150" r="25"/>
-<text class="small-text" x="550" y="190">Language</text>
-
-<circle class="node" cx="250" cy="350" r="25"/>
-<text class="small-text" x="250" y="390">Society</text>
-
-<circle class="node" cx="550" cy="350" r="25"/>
-<text class="small-text" x="550" y="390">AI</text>
-
-<!-- Outer -->
-
-<circle class="node" cx="120" cy="80" r="18"/>
-<text class="small-text" x="120" y="110">Logic</text>
-
-<circle class="node" cx="120" cy="220" r="18"/>
-<text class="small-text" x="120" y="250">Science</text>
-
-<circle class="node" cx="680" cy="80" r="18"/>
-<text class="small-text" x="680" y="110">Memory</text>
-
-<circle class="node" cx="680" cy="220" r="18"/>
-<text class="small-text" x="680" y="250">Culture</text>
-
-<circle class="node" cx="120" cy="420" r="18"/>
-<text class="small-text" x="120" y="450">Law</text>
-
-<circle class="node" cx="680" cy="420" r="18"/>
-<text class="small-text" x="680" y="450">Creativity</text>
-
-</svg>
+What if concepts are not merely creations of the human mind?
 
 </div>
 
-<section>
+<div class="section">
 
-<h2>What is Inter Concept Space?</h2>
+For over two thousand years, philosophers have debated the nature of reality.
 
-<div class="card">
+Are ideas discovered or invented?
 
-<p>
-
-Inter Concept Space is a proposed framework for understanding how concepts connect, evolve and generate meaning.
-
-Rather than viewing ideas as isolated entities, it treats them as parts of a connected landscape where knowledge, culture, institutions and intelligent systems emerge from relationships between concepts.
-
-</p>
+Do they arise from experience, or does experience itself depend upon deeper conceptual structures?
 
 </div>
 
-</section>
+<div class="section">
 
-<section>
+Plato spoke of Forms.
 
-<h2>Why Now?</h2>
+Aristotle spoke of observation.
 
-<div class="card">
+Schopenhauer spoke of a reality hidden beneath appearances.
 
-<p>
+Jung spoke of archetypes.
 
-Large language models, knowledge graphs and modern cognitive science all suggest that intelligence may arise from networks of relationships rather than isolated facts.
+Modern artificial intelligence discovers latent spaces.
 
-Inter Concept Space explores whether concepts themselves form a deeper structure that can be studied, mapped and navigated.
-
-</p>
+Each may be describing different aspects of the same underlying landscape.
 
 </div>
 
-</section>
+<div class="section">
 
-<section>
+Inter Concept Space is the hypothesis that concepts exist within a connected structure of relationships.
 
-<h2>Research Directions</h2>
+Minds, cultures, institutions, sciences and intelligent systems do not create this structure from nothing.
 
-<div class="grid">
-
-<div class="box">Conceptual Geometry</div>
-<div class="box">Knowledge Networks</div>
-<div class="box">Artificial Intelligence</div>
-<div class="box">Cognitive Science</div>
-<div class="box">Collective Intelligence</div>
-<div class="box">Philosophy of Mind</div>
+They explore it.
 
 </div>
 
-</section>
+<div class="section">
 
-<section>
+A mathematician encounters numbers.
 
-<h2>Current Status</h2>
+A scientist encounters laws.
 
-<div class="card">
+A jurist encounters justice.
 
-<p>
+An artist encounters symbols.
 
-Version 0.1
+An AI encounters patterns.
 
-Inter Concept Space is currently under development. Future work will include papers, visualizations, experiments and interactive tools for exploring the structure of ideas.
-
-</p>
+Perhaps all are navigating the same terrain.
 
 </div>
 
-</section>
+<hr>
 
-<footer>
+<div class="section">
 
-<h3>Inter Concept Space</h3>
+The purpose of this project is to investigate that possibility.
 
-<p>Exploring the Structure of Ideas</p>
+</div>
 
-</footer>
+<div class="footer">
+
+InterConceptSpace.org
 
 </div>
 
